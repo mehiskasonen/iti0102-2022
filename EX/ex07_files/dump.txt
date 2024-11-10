@@ -1,0 +1,163 @@
+input_dates = read_file_contents_to_list(dates_filename)
+    input_towns = read_file_contents_to_list(towns_filename)
+
+    for element in input_dates:
+        a = element.split(":")
+        dates.append(a)
+
+    for element in input_towns:
+        b = element.split(":")
+        towns.append(b)
+
+    for line in dates:
+        result.append([line[0], "-", line[1]])
+
+
+"""
+def find_name(name, r)
+    for i, name in enumerate(r)
+        if item[0] == name:
+            return i
+    return -1
+
+
+"""
+'''
+    for row in towns:
+                                                                            # any(row[0] in x for x in lis)
+        count = 1
+        print(row[0])
+        if row[0] == result[count][0]:
+            result[count] = [row[0], row[1], result[count][2]]
+            print(row)
+        if row[0] != result[count][0]:
+            print("Ei sisalda")
+        count += 1
+                # result += [row[0], row[1], "-"]
+        # result.append(line_to_add)
+
+    print(result)
+    '''
+
+"""
+with open(csv_output_filename, 'w', newline='') as csv_out_file:
+    writer = csv.writer(csv_out_file, delimiter=',')
+    for row in a:
+        print(row)
+        writer.writerow(row)
+    csv_out_file.close()
+"""
+
+"""
+result2 = [["name", "town", "date"]]
+dates = []
+dates2 = []
+towns = []
+towns2 = []
+input_dates = read_file_contents_to_list(dates_filename)
+input_towns = read_file_contents_to_list(towns_filename)
+
+for element in input_dates:
+    a = element.split(":")
+    dates.append(a)
+
+for element in input_towns:
+    b = element.split(":")
+    towns.append(b)
+
+for line in towns:
+    towns2.append([line[0], line[1], "-"])
+
+# print(towns)
+# print(dates)
+for line in dates:
+    dates2.append([line[0], "-", line[1]])
+
+print(dates2)
+print(towns2)
+print(result2)
+"""
+
+"""
+# global line_to_add
+result = [["name", "town", "date"]]
+with open(dates_filename, "r", encoding='utf-8') as dates:
+    dates_list = csv.reader(dates, delimiter=':')
+    with open(towns_filename, "r", encoding='utf-8') as towns:
+        towns_list = csv.reader(towns, delimiter=':')
+        for row in dates_list:
+            line_dates = [row[0], "-", row[1]]
+            print(line_dates)
+            for row2 in towns_list:
+                line_towns = [row2[0], row2[1], "-"]
+                print(line_towns)
+                if row2[0] == row[0]:
+                    line_dates[1] = row2[1]
+                if row2[0] != row[0]:
+                    print(row2[0])
+                    toadd = [row2[0], "-", row2[1]]
+            # result.insert(0, line)
+            result.append(line_dates)
+        result.append(toadd)
+            # result.insert(len(result), toadd)
+        print(result)
+with open(csv_output_filename, 'w', newline='') as csv_out_file:
+    writer = csv.writer(csv_out_file, delimiter=',')
+    for row in result:
+        writer.writerow(row)
+    csv_out_file.close()
+"""
+
+"""
+for element1 in date_result:
+    # date_result1 = date_result - selle tegemine tegi väga imelike asju
+    # element1_split = element1.split(",")
+    for element2 in town_result:
+        # element2_split = element2.split(",")
+        if element1_split[0] == element2_split[0]:
+            if element1_split[1] == "-":
+                final_result += [f"{element1_split[0]},{element2_split[1]},{element1_split[2]}"]
+                date_result1.append(element1)
+                town_result1.append(element2)
+            elif element1_split[2] == "-":
+                final_result += [f"{element1_split[0]},{element1_split[1]},{element2_split[2]}"]
+                date_result1.append(element1)
+"""
+
+
+
+read_csv_file_into_list_of_dicts_using_datatypes
+
+
+
+"""
+    lst = []
+    if delimiter is None:
+        delimiter = ","
+    with open(filename, "r") as f:
+        csv_reader = csv.DictReader(f, delimiter=delimiter)
+        for line in csv_reader:
+            lst.append(line)
+
+    for dict in lst:
+        try:
+            dict["id"] = int(dict["id"])
+            dict["blind date"] = datetime.date(datetime.strptime(dict["blind date"], "%d.%m.%Y"))
+        except ValueError:
+            pass
+        for key in dict:
+            if dict[key] == "-":
+                dict[key] = None
+    return lst
+"""
+
+"""
+result = []
+with open(filename, "r", newline='') as csvfile:
+    csv_reader = DictReader(csvfile, delimiter=',', fieldtypes=['name']astype)
+    for row in csv_reader:
+
+        result.append(row)
+    return result
+    d.strptime("%Y, %M, %D")
+"""

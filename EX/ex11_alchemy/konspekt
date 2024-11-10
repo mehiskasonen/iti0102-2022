@@ -1,0 +1,25 @@
+Cauldron add() funktsiooni selgitus::
+
+
+# print(self.elements_list)
+        # Validation Kas lisatav element AlchemicalElement('Water') ja mingi teine element elements_listis == väärtustele
+        # recipes_book elementide hulgast. Kui paarid võrduvad, siis kustutada olemasolev ja lisada storagisse kahe elemendi produkti.
+        # get_product_name on selleks, et dicti ei peaks läbi käima. Kui tulemus on None, siis nendega ei saa midagi kokku panna ja
+        # lisad elemendi storagisse.
+
+        # result = if self.recipes.get_product_name(element.name, one_element_name):
+        # if result:
+            # self.elements_list.remove(one_element)      # one_element on see, mille tsükliga saab.
+            # super(Cauldron, self).add(AlchemicalElement(result))
+
+            # kui oled lisamise ära teinud, võib tsükli funktsiooni ära lõpetada. return ...
+            # 4. osas võib loodud kombinatsioon kombineeruda mingi uue kombinatsiooniga. Selleks lisada listi ja proovida kõiki kõikidega.
+            # Selleks peaks ära lõpetama ja hakkama otsast peale.
+
+
+            # def combine(self) -> bool:
+            #   for first_element in self.elements_list:
+            #       for second_element in self.elements_list:
+            #           return True
+            #   return False
+        # if self.recipes.get_product_name(element.name, one_element_name):

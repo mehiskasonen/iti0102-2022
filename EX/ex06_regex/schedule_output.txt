@@ -1,0 +1,17 @@
+-------------------------------
+|     time | entries          |
+-------------------------------
+| 12:00 AM | aliquam          |
+| 12:12 AM | parturient       |
+|  1:02 AM | goodone          |
+|  7:01 AM | libero           |
+|  8:01 AM | lorem            |
+|  8:08 AM | integer          |
+| 10:00 AM | a                |
+| 11:00 AM | lorem            |
+|  3:00 PM | nocomma          |
+|  6:19 PM | a                |
+|  9:59 PM | nopoint          |
+| 10:00 PM | commaisalsook    |
+| 11:59 PM | canuseminusthere |
+-------------------------------
